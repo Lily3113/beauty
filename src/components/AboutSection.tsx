@@ -2,7 +2,7 @@ import { Eye, Target, Heart } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
+    <section id="about" className="py-40 md:py-32 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-3">Who We Are</p>
