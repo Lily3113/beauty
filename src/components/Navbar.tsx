@@ -1,6 +1,6 @@
 import logo from "@/assets/logo.jpg";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const WHATSAPP_NUMBER = "263715624731";
 const WHATSAPP_MSG = encodeURIComponent("Hi B Gorgeous Beauty Academy, I would like to enquire about enrolling.");
@@ -11,6 +11,7 @@ const handleEnroll = () => {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const links = [
     { label: "Home", href: "#home" },
@@ -19,6 +20,29 @@ const Navbar = () => {
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = links.map(link => link.href.substring(1)); // Remove the # from href
+      const scrollPosition = window.scrollY + 100; // Add offset for navbar height
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial active section
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [links]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -32,7 +56,15 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-charcoal-light hover:text-primary transition-colors">
+            <a
+              key={l.href}
+              href={l.href}
+              className={`text-sm font-medium transition-colors ${
+                activeSection === l.href.substring(1)
+                  ? "text-primary"
+                  : "text-charcoal-light hover:text-primary"
+              }`}
+            >
               {l.label}
             </a>
           ))}
@@ -59,7 +91,11 @@ const Navbar = () => {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-3 text-sm font-medium text-charcoal-light hover:text-primary border-b border-border"
+              className={`block py-3 text-sm font-medium border-b border-border transition-colors ${
+                activeSection === l.href.substring(1)
+                  ? "text-primary"
+                  : "text-charcoal-light hover:text-primary"
+              }`}
             >
               {l.label}
             </a>
