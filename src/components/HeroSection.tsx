@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-background leading-tight mb-6 animate-fade-in-up">
-          Master Beauty Skills. Build Your Empire.
+          Master Beauty Skills, Build Your Empire.
         </h1>
         <p className="max-w-2xl mx-auto text-background/80 font-body text-base md:text-lg mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           Gain confidence, earn more, be your own boss.

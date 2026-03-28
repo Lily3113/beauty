@@ -1,7 +1,7 @@
 import logo from "@/assets/logo.jpg";
 import { MapPin, Phone } from "lucide-react";
 
-const WHATSAPP_1 = "263715624731";
+const WHATSAPP_1 = "263715642298";
 const WHATSAPP_2 = "263715642298";
 const WHATSAPP_MSG = encodeURIComponent("Hi B Gorgeous Beauty Academy, I would like to enquire about enrolling.");
 
