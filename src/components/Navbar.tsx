@@ -2,7 +2,7 @@ import logo from "@/assets/logo.jpg";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const WHATSAPP_NUMBER = "263715624731";
+const WHATSAPP_NUMBER = "263715642298";
 const WHATSAPP_MSG = encodeURIComponent("Hi B Gorgeous Beauty Academy, I would like to enquire about enrolling.");
 
 const handleEnroll = () => {

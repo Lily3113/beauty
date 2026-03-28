@@ -32,7 +32,7 @@ const ContactFooter = () => {
               Chat on WhatsApp
             </button>
             <a
-              href="tel:+263715624731"
+              href="tel:+263715642298"
               className="inline-flex items-center gap-2 rounded-full border border-background/30 px-6 py-3 text-sm font-semibold text-background hover:bg-background/10 transition-colors"
             >
               <Phone className="w-4 h-4" />
