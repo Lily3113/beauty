@@ -1,10 +1,10 @@
-# B Gorgeous Empire
+# B Gorgeous Beauty Academy
 
 A modern, responsive beauty and wellness services website built with React, TypeScript, and Tailwind CSS.
 
 ## Overview
 
-B Gorgeous Empire is a professional website showcasing beauty and wellness services including braids, eyelashes, facials, makeup, massages, microblading, nails, pedicure/manicure, body tinting, waxing, and wig installation.
+B Gorgeous Beauty Academy is a professional website showcasing beauty and wellness services including braids, eyelashes, facials, makeup, massages, microblading, nails, pedicure/manicure, body tinting, waxing, and wig installation.
 
 ## Tech Stack
 
