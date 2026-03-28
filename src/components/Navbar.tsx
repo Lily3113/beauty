@@ -50,7 +50,7 @@ const Navbar = () => {
         <a href="#home" className="flex items-center gap-2">
           <img src={logo} alt="B Gorgeous Beauty Academy" className="h-12 w-12 rounded-full object-cover" />
           <span className="font-heading text-lg font-semibold text-foreground hidden sm:block">
-            B Gorgeous
+            B Gorgeous Beauty Academy
           </span>
         </a>
 

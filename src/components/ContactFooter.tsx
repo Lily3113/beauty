@@ -46,8 +46,8 @@ const ContactFooter = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="B Gorgeous" className="w-10 h-10 rounded-full object-cover" />
-              <span className="font-heading text-lg font-semibold text-foreground">B Gorgeous</span>
+              <img src={logo} alt="B Gorgeous Beauty Academy" className="w-10 h-10 rounded-full object-cover" />
+              <span className="font-heading text-lg font-semibold text-foreground">B Gorgeous Beauty Academy</span>
             </div>
             <p className="text-muted-foreground font-body text-sm leading-relaxed">
               Learn the Skill. Build the Empire.
