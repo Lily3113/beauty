@@ -79,7 +79,7 @@ const ContactFooter = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground font-body text-sm">
                 <MapPin className="w-3.5 h-3.5 text-primary" />
-                Harare, Zimbabwe
+                Kweke, Zimbabwe
               </li>
             </ul>
           </div>
