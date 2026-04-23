@@ -58,8 +58,8 @@ const CoursesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {visible.map((course) => (
-            <div key={course.title} className="bg-background rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
-              <div className="aspect-[4/3] overflow-hidden">
+            <div key={course.title} className="bg-background rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group flex flex-col h-full">
+              <div className="aspect-[4/3] overflow-hidden shrink-0">
                 <img
                   src={course.image}
                   alt={course.title}
@@ -67,12 +67,12 @@ const CoursesSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-2">
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex items-center justify-between mb-2 shrink-0">
                   <h3 className="font-heading text-lg font-semibold text-foreground">{course.title}</h3>
                   <span className="text-primary font-body font-bold text-lg">{course.price}</span>
                 </div>
-                <p className="text-muted-foreground font-body text-sm leading-relaxed">{course.description}</p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed flex-grow">{course.description}</p>
               </div>
             </div>
           ))}

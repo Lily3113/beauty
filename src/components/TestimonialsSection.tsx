@@ -17,14 +17,14 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-muted rounded-2xl p-8 text-center">
-              <div className="flex justify-center gap-1 mb-4">
+            <div key={i} className="bg-muted rounded-2xl p-8 text-center flex flex-col h-full">
+              <div className="flex justify-center gap-1 mb-4 shrink-0">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground font-body italic leading-relaxed mb-4">"{t.text}"</p>
-              <p className="text-primary font-body font-semibold text-sm">— {t.name}</p>
+              <p className="text-foreground font-body italic leading-relaxed mb-4 flex-grow">"{t.text}"</p>
+              <p className="text-primary font-body font-semibold text-sm shrink-0">— {t.name}</p>
             </div>
           ))}
         </div>

@@ -18,21 +18,21 @@ const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-muted rounded-2xl p-8 text-center">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+          <div className="bg-muted rounded-2xl p-8 text-center flex flex-col h-full">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 shrink-0">
               <Eye className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Vision</h3>
-            <p className="text-muted-foreground font-body text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-semibold text-foreground mb-3 shrink-0">Vision</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed flex-grow">
               To build a powerhouse beauty academy that creates fearless, self-made women — turning passion into profit, skills into empires, and everyday women into confident bosses who dominate the beauty industry and uplift their communities.
             </p>
           </div>
-          <div className="bg-muted rounded-2xl p-8 text-center">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+          <div className="bg-muted rounded-2xl p-8 text-center flex flex-col h-full">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 shrink-0">
               <Target className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Mission</h3>
-            <p className="text-muted-foreground font-body text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-semibold text-foreground mb-3 shrink-0">Mission</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed flex-grow">
               Our mission is to empower women to take control of their future through beauty, hustle, and entrepreneurship. We don't just teach skills — we build confidence, independence, and boss mentality.
             </p>
           </div>

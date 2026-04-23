@@ -22,16 +22,16 @@ const HeroSection = () => {
         <p className="max-w-2xl mx-auto text-background/80 font-body text-base md:text-lg mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           Gain confidence, earn more, be your own boss.
         </p>
-        <div className="flex flex-row items-center justify-center gap-2 md:gap-4 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
           <button
             onClick={handleEnroll}
-            className="rounded-full bg-primary px-6 md:px-8 py-3 md:py-3.5 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
+            className="w-full sm:w-auto rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
           >
             Enroll Now
           </button>
           <a
             href="#courses"
-            className="rounded-full border-2 border-background/40 px-6 md:px-8 py-3 md:py-3.5 text-sm font-semibold text-background hover:bg-background/10 transition-colors"
+            className="w-full sm:w-auto text-center rounded-full border-2 border-background/40 px-8 py-3.5 text-sm font-semibold text-background hover:bg-background/10 transition-colors"
           >
             View Courses
           </a>

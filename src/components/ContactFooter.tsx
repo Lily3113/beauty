@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.jpg";
-import { MapPin, Phone, ArrowRight } from "lucide-react";
+import { MapPin, Mail, Phone, ArrowRight } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Link } from "react-router-dom";
 
 const WHATSAPP_1 = "263715642298";
 const WHATSAPP_2 = "263715642298";
@@ -38,8 +39,16 @@ const ContactFooter = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    // TODO: Link to email
-    console.log("Form submitted:", data);
+    // Create personalized WhatsApp message with form data
+    const personalizedMessage = encodeURIComponent(
+      `Hi B Gorgeous Beauty Academy!\n\n` +
+      `Name: ${data.name}\n` +
+      `Email: ${data.email}\n` +
+      `Interest: ${data.industry}\n` +
+      `Message: ${data.message}\n\n` +
+      `I would like to enquire about enrolling.`
+    );
+    window.open(`https://wa.me/${WHATSAPP_1}?text=${personalizedMessage}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -79,7 +88,7 @@ const ContactFooter = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Kweke, Zimbabwe</p>
+                    <p className="text-muted-foreground">Kwekwe, Zimbabwe</p>
                   </div>
                 </div>
               </div>
@@ -178,12 +187,12 @@ const ContactFooter = () => {
         </div>
 
         {/* Footer columns */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10 max-w-7xl mx-auto">
           {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="B Gorgeous Beauty Academy" className="w-10 h-10 rounded-full object-cover" />
-              <span className="font-heading text-lg font-semibold text-foreground">B Gorgeous Beauty Academy</span>
+          <div className="lg:col-span-1 flex flex-col">
+            <div className="flex items-center gap-3 mb-6">
+              <img src={logo} alt="" aria-hidden="true" className="w-8 h-8 rounded-full object-cover shrink-0" />
+              <span className="font-heading text-base font-bold text-foreground uppercase tracking-wider">B Gorgeous</span>
             </div>
             <p className="text-muted-foreground font-body text-sm leading-relaxed">
               Learn the Skill. Build the Empire.
@@ -191,12 +200,12 @@ const ContactFooter = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="flex flex-col">
+            <h4 className="font-heading text-sm font-bold text-foreground uppercase tracking-wider mb-6">Quick Links</h4>
+            <ul className="space-y-4">
               {["Home", "About", "Courses", "Testimonials"].map((l) => (
                 <li key={l}>
-                  <a href={`#${l.toLowerCase()}`} className="text-muted-foreground font-body text-sm hover:text-primary transition-colors">
+                  <a href={`#${l.toLowerCase()}`} className="text-muted-foreground font-body text-sm hover:text-primary transition-colors block leading-none">
                     {l}
                   </a>
                 </li>
@@ -205,39 +214,41 @@ const ContactFooter = () => {
           </div>
 
           {/* Contact */}  
-          <div>
-            <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Contact</h4>
-            <ul className="space-y-2 mb-6">
-             
-              <li className="flex items-center gap-2 text-muted-foreground font-body text-sm">
-                <Phone className="w-3.5 h-3.5 text-primary" />
+          <div className="flex flex-col">
+            <h4 className="font-heading text-sm font-bold text-foreground uppercase tracking-wider mb-6">Contact</h4>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
+                <Phone className="w-4 h-4 shrink-0 text-primary" />
                 +263 715 642 298
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground font-body text-sm">
-                <MapPin className="w-3.5 h-3.5 text-primary" />
-                Kweke, Zimbabwe
+              <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
+                <MapPin className="w-4 h-4 shrink-0 text-primary" />
+                Kwekwe, Zimbabwe
               </li>
             </ul>
           </div>
 
           {/* Social */}
-          <div>
-            <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Follow Us</h4>
+          <div className="flex flex-col">
+            <h4 className="font-heading text-sm font-bold text-foreground uppercase tracking-wider mb-6">Follow Us</h4>
             <div className="flex items-center gap-4">
-
-
               {/* Facebook */}
-              <a href="https://www.facebook.com/p/B-Gorgeous-Beauty-Academy-61566899635435/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-foreground/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
+              <a href="https://www.facebook.com/p/B-Gorgeous-Beauty-Academy-61566899635435/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors" aria-label="Facebook">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </a>
+
+              {/* Email */}
+              <Link to="/email-coming-soon" className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors" aria-label="Email">
+                <Mail className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center pt-6 border-t border-border">
+        <div className="text-center pt-6 border-t border-border max-w-7xl mx-auto">
           <p className="text-muted-foreground font-body text-xs">
             &copy; {new Date().getFullYear()} B Gorgeous Beauty Academy. All rights reserved.
           </p>
