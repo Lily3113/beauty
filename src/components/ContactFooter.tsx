@@ -218,6 +218,12 @@ const ContactFooter = () => {
             <h4 className="font-heading text-sm font-bold text-foreground uppercase tracking-wider mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
+                <Mail className="w-4 h-4 shrink-0 text-primary" />
+                <a href="mailto:info@bgorgeousbeautyacademy.net" className="hover:text-primary transition-colors">
+                  info@bgorgeousbeautyacademy.net
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
                 <Phone className="w-4 h-4 shrink-0 text-primary" />
                 +263 715 642 298
               </li>
@@ -240,9 +246,9 @@ const ContactFooter = () => {
               </a>
 
               {/* Email */}
-              <Link to="/email-coming-soon" className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors" aria-label="Email">
+              <a href="mailto:info@bgorgeousbeautyacademy.net" className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors" aria-label="Email">
                 <Mail className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
