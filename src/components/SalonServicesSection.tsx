@@ -7,7 +7,6 @@ import eyelashesImg from "@/assets/Eyelash Extensions.jfif";
 import microbladingImg from "@/assets/microblading.jfif";
 
 const WHATSAPP_NUMBER = "263715642298";
-const WHATSAPP_MSG = encodeURIComponent("Hi B Gorgeous Beauty Services, I'd like to book an appointment..");
 
 interface Service {
   title: string;
@@ -67,10 +66,6 @@ const SalonServicesSection = () => {
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? services : services.slice(0, INITIAL_COUNT);
 
-  const handleBookService = () => {
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="services" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
@@ -99,6 +94,14 @@ const SalonServicesSection = () => {
                   <span className="text-primary font-body font-bold text-lg">{service.price}</span>
                 </div>
                 <p className="text-muted-foreground font-body text-sm leading-relaxed flex-grow">{service.description}</p>
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi B Gorgeous Beauty Services, I'd like to book ${service.title}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors w-full justify-center"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           ))}
@@ -114,15 +117,6 @@ const SalonServicesSection = () => {
             </button>
           </div>
         )}
-
-        <div className="text-center mt-10">
-          <button
-            onClick={handleBookService}
-            className="inline-flex rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
-          >
-            Book Your Service Today
-          </button>
-        </div>
       </div>
     </section>
   );
