@@ -71,12 +71,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={handleEnroll}
+          <a
+            href="#contact"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
@@ -100,12 +100,12 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={handleEnroll}
+          <a
+            href="#contact"
             className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
       )}
     </nav>

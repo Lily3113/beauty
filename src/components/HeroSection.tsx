@@ -23,12 +23,12 @@ const HeroSection = () => {
           Gain confidence, earn more, be your own boss.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
-          <button
-            onClick={handleEnroll}
+          <a
+            href="#contact"
             className="w-full sm:w-auto rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
           >
             Enroll Now
-          </button>
+          </a>
           <a
             href="#courses"
             className="w-full sm:w-auto text-center rounded-full border-2 border-background/40 px-8 py-3.5 text-sm font-semibold text-background hover:bg-background/10 transition-colors"

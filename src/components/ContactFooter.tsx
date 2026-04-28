@@ -79,7 +79,9 @@ const ContactFooter = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Call us</p>
-                    <p className="text-muted-foreground">+263 715 642 298</p>
+                    <a href="tel:+263715642298" className="text-muted-foreground hover:text-primary transition-colors">
+                      +263 715 642 298
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -225,7 +227,9 @@ const ContactFooter = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
                 <Phone className="w-4 h-4 shrink-0 text-primary" />
-                +263 715 642 298
+                <a href="tel:+263715642298" className="hover:text-primary transition-colors">
+                  +263 715 642 298
+                </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground font-body text-sm leading-none">
                 <MapPin className="w-4 h-4 shrink-0 text-primary" />

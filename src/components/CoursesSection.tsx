@@ -93,12 +93,12 @@ const CoursesSection = () => {
           <p className="text-muted-foreground font-body text-sm mb-6">
             Registration Fee: $15 &nbsp;|&nbsp; Branded T-shirt: $10
           </p>
-          <button
-            onClick={handleEnroll}
+          <a
+            href="#contact"
             className="inline-flex rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-rose-gold-dark transition-colors"
           >
             Start Your Beauty Career Today
-          </button>
+          </a>
         </div>
       </div>
     </section>
